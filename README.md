@@ -18,7 +18,7 @@ git clone https://github.com/Estafet-LTD/estafet-microservices-scrum.git
 ```
 
 #### Step #2
-You will need to 
+You will need to
 
 > Note:- If you are using minishift, it might be advisible to tweak the resources available (see above).
 
@@ -33,8 +33,8 @@ Just like the microservices, the cucumber tests are configured using environment
 Setting up the environment variables is a lengthly process as each there are parameters for each microservice and its corresponding database. Fortunately this is a one time process that only has to be revisted when new microservices are added to the application.
 
 ##### Windows Environment Variables Setup
-Below are the environment variables and their corresponding values that are required to run the tests on a Windows 10 environment. 
- 
+Below are the environment variables and their corresponding values that are required to run the tests on a Windows 10 environment.
+
 |Variable|Value|
 |--------|-----|
 |OPENSHIFT_HOST|192.168.99.100|
@@ -66,7 +66,7 @@ Below are the environment variables and their corresponding values that are requ
 |TASK_API_DB_USER|postgres|
 |TASK_API_JDBC_URL|jdbc:postgresql://localhost:5432/task-api|
 |TASK_API_SERVICE_URI|http://task-api-test-microservices-scrum.%OPENSHIFT_HOST%.nip.io|
- 
+
 ##### Linux Environment Variables Setup
  Below are variable variables for linux. It might be easiest to copy the code below and add it to the `~/.profile` file.
 

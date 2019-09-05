@@ -18,7 +18,7 @@ Feature: Add Task
     And with remaining hours <remaining hours>
     And the status for the <story> should now be <story status>
 
-    Examples: 
+    Examples:
       | story                | story status | title      | initial hours | remaining hours |
       | create the ui        | Planning     | My Task #1 |            13 |              13 |
       | back end development | Planning     | My Task #2 |             5 |               5 |

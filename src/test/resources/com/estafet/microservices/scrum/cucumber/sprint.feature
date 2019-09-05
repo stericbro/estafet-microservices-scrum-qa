@@ -18,7 +18,7 @@ Feature: Sprint
     And will have a status of "In Progress" for <story>
     And the sprint burndown total will be <sprint burndown>
 
-    Examples: 
+    Examples:
       | story         | sprint burndown |
       | create the ui |              15 |
       | database work |               3 |
