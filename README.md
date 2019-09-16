@@ -14,7 +14,7 @@ Furthermore, as the cucumber tests are running locally (either on a Linux machin
 Clone the scrum repository to a directory of your choice.
 
 ```
-git clone https://github.com/Estafet-LTD/estafet-microservices-scrum.git
+git clone https://github.com/stericbro/estafet-microservices-scrum.git
 ```
 
 #### Step #2
@@ -108,7 +108,7 @@ The final setup step requires setting up the port forwarding for the database an
 Clone the qa repository to a directory of your choice.
 
 ```
-git clone https://github.com/Estafet-LTD/estafet-microservices-scrum-qa.git
+git clone https://github.com/stericbro/estafet-microservices-scrum-qa.git
 $ ./pf-broker.sh
 $ ./pf-db.sh
 ```
@@ -121,11 +121,11 @@ The tests can now be executed either via a development IDE (e.g. Eclipse) or fro
 #### Executing via Eclipse
 Within the QA project  src/test/java > Run As > Junit Test
 
-![alt tag](https://github.com/Estafet-LTD/estafet-microservices-scrum/blob/master/ExecutingCucumberTestsOnWindows.png)
+![alt tag](https://github.com/stericbro/estafet-microservices-scrum/blob/master/ExecutingCucumberTestsOnWindows.png)
 
 The results should appear as
 
-![alt tag](https://github.com/Estafet-LTD/estafet-microservices-scrum/blob/master/CucumberTestResultsOnWindows.png)
+![alt tag](https://github.com/stericbro/estafet-microservices-scrum/blob/master/CucumberTestResultsOnWindows.png)
 
 #### Executing via command line
 ```
