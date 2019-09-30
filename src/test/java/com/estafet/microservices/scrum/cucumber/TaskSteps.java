@@ -91,7 +91,7 @@ public class TaskSteps {
 	}
 
 	@Then("^I should be able to see the task My Task #(\\d+) added to the create the ui page$")
-	public void i_should_be_able_to_see_the_task_My_Task_added_to_the_create_the_ui_page(int arg1) throws Throwable {		
+	public void i_should_be_able_to_see_the_task_My_Task_added_to_the_create_the_ui_page(int arg1) throws Throwable {
 		task = "My Task #" + arg1;
 		assertTrue(storyPage.getTasks().contains(task));
 	}

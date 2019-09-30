@@ -34,7 +34,7 @@ public class StorySteps {
 	public void after() {
 		homePage.close();
 	}
-	
+
 	@Given("^the following project has already been created for add story:$")
 	public void the_following_project_has_already_been_created_for_add_story(DataTable dataTable) throws Throwable {
 		new ProjectDataSetBuilder().setData(dataTable.raw()).build().get(0);
@@ -57,7 +57,7 @@ public class StorySteps {
 	public void story_points(int arg1) throws Throwable {
 	    addStoryPage.setStoryPointsField(arg1);
 	}
-	
+
 	@When("^submit the story$")
 	public void submit_the_story() throws Throwable {
 		projectPage = addStoryPage.clickSubmitButton();

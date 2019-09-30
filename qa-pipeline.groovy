@@ -32,7 +32,7 @@ node('maven') {
 								"PROJECT_API_SERVICE_URI=http://project-api.test.svc:8080" ]) {
 			withMaven(mavenSettingsConfig: 'microservices-scrum') {
 				try {
-					sh "mvn clean test"	
+					sh "mvn clean test"
 				} finally {
 					cucumber buildStatus: 'UNSTABLE', fileIncludePattern: '**/*cucumber-report.json',  trendsLimit: 10
 				}

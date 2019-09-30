@@ -153,9 +153,9 @@ public class ProjectSteps {
 	@Then("^the project burndown should consist of (\\d+) sprints, each totalling (\\d+) story point effort remaining$")
 	public void the_project_burndown_should_consist_of_sprints_each_totalling_story_point_effort_remaining(int noSprints, int pointsTotal) throws Throwable {
 		ProjectBurndown projectBurndown = Project.getProjectById(projectBurndownPage.getProjectId()).getBurndown();
-		assertThat(projectBurndown.getSprints().size()-1, is(noSprints));	
+		assertThat(projectBurndown.getSprints().size()-1, is(noSprints));
 		for (ProjectBurndownSprint sprint : projectBurndown.getSprints()) {
-			assertThat(sprint.getPointsTotal(), is(pointsTotal));	
+			assertThat(sprint.getPointsTotal(), is(pointsTotal));
 		}
 	}
 
@@ -169,6 +169,6 @@ public class ProjectSteps {
 	@Then("^the sprint burndown should contain (\\d+) days$")
 	public void the_sprint_burndown_should_contain_days(int noDays) throws Throwable {
 	   assertThat(Sprint.getSprint(sprintBurndownPage.getSprintId()).getSprintBurndown().getSprintDays().size()-1, is(noDays));
-	}	
-	
+	}
+
 }

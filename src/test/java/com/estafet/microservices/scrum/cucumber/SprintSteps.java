@@ -110,7 +110,7 @@ public class SprintSteps {
 		assertFalse(sprintPage.isAvailableStory("database work"));
 		assertTrue(sprintPage.isSprintStory("database work"));
 	}
-	
+
 	@Given("^these projects have already been created for the sprint board:$")
 	public void these_projects_have_already_been_created_for_the_sprint_board(DataTable dataTable) throws Throwable {
 	    Project project = new ProjectDataSetBuilder().setData(dataTable.raw()).build().get(0);
@@ -132,7 +132,7 @@ public class SprintSteps {
 			assertTrue(sprintPage.isLoaded());
 		}
 	}
-	
+
 	@When("^on the sprint board \"([^\"]*)\" page$")
 	public void on_the_sprint_board_page(String sprint) throws Throwable {
 		sprintBoardPage = sprintPage.clickSprintBoardLink();
@@ -153,14 +153,14 @@ public class SprintSteps {
 			assertThat(todo.getStoryTitle(), is(story));
 		}
 	}
-	
+
 	@When("^click the claim button for task Task#(\\d+)$")
 	public void click_the_claim_button_for_task_Task(int arg1) throws Throwable {
 		sprintBoardPage = sprintBoardPage.getTodoTask("Task#" + arg1).claim();
 		assertTrue(sprintBoardPage.isLoaded());
 		assertNull(sprintBoardPage.getTodoTask("Task#" + arg1));
 	}
-	
+
 	@Then("^verify that Task#(\\d+) is in the In Progress column$")
 	public void verify_that_Task_is_in_the_In_Progress_column(int arg1) throws Throwable {
 		assertNotNull(sprintBoardPage.getInProgressTask("Task#" + arg1));
@@ -199,7 +199,7 @@ public class SprintSteps {
 	    	assertNotNull(sprintBoardPage.getCompleted(row.get(0)));
 	    }
 	}
-	
+
 	@When("^the current active sprint should be \"([^\"]*)\" as viewed from the \"([^\"]*)\" page$")
 	public void the_current_active_sprint_should_be_as_viewed_from_the_page(String sprint, String project) throws Throwable {
 		waitForTwoSprints();
@@ -221,18 +221,18 @@ public class SprintSteps {
 	public void should_be_in_the_completed_sprints_on_the_page(String sprint, String project) throws Throwable {
 	    assertThat(projectPage.getCompletedSprints().get(0), is("Sprint " + sprint));
 	}
-	
+
 	@Then("^the project burndown total for Sprint# (\\d+) should be (\\d+) points$")
 	public void the_project_burndown_total_for_Sprint_should_be_points(int sprint, int points) throws Throwable {
 	    assertThat(Project.getProjectById(projectPage.getProjectId()).getBurndown().getSprints().get(sprint).getPointsTotal(), is(points));
 	}
-	
+
 	@Then("^on the \"([^\"]*)\" page, the \"([^\"]*)\" and \"([^\"]*)\" have statuses of \"([^\"]*)\"$")
 	public void on_the_page_the_and_have_statuses_of(String project, String story1, String story2, String status) throws Throwable {
 	    assertThat(projectPage.getStoryStatus(story1), is(status));
 	    assertThat(projectPage.getStoryStatus(story2), is(status));
 	}
-	
+
 	@When("^click update hours link for task Task#(\\d+)$")
 	public void click_update_hours_link_for_task_Task(int arg1) throws Throwable {
 		updateTaskHoursPage = sprintBoardPage.getInProgressTask("Task#" + arg1).clickHoursLink();
@@ -245,5 +245,5 @@ public class SprintSteps {
 	 	assertTrue(sprintBoardPage.isLoaded());
 	}
 
-	
+
 }
